@@ -1,2 +1,3 @@
 class ClaseNombreCommit {
+        int x;
 }
