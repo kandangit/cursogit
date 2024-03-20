@@ -9,5 +9,5 @@ jobs:
       - name: Només si el push que dispara el workflow és a la branca principal.
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         run: echo "PUSH A LA BRANCA MASTER"
-      - name: Descomprimeix el zip
+      - name: Descomprimeix el zip.
         run: unzip -P ${{ secrets.ZIP_PASS }} secret.zip
