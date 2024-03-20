@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: output-log-file
-          path: archivodetext.txt
+          path: sample.txt
   Download-Actions:
     runs-on: ubuntu-latest
     steps:
