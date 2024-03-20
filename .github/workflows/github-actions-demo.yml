@@ -32,6 +32,7 @@ jobs:
           name: output-log-file
           path: sample.txt
   Download-Actions:
+    needs: Explore-GitHub-Actions
     runs-on: ubuntu-latest
     steps:
       - name: Download a single artifact
