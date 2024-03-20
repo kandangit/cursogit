@@ -6,9 +6,6 @@ jobs:
   Expressions-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Només si el push que dispara el workflow és a la branca principal.
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
-        run: echo "PUSH A LA BRANCA MASTER"
       - name: Instal·la unzip
         run: sudo apt-get install unzip
       - name: Checkout
