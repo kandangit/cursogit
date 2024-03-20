@@ -22,6 +22,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: echo $ {{  VARIABLE_1 }}
+      - run: echo "VARIABLE_1: $VARIABLE_1"
       - run: echo $ {{  VARIABLE_2 }}
       - run: echo $ {{  VARIABLE_1 }}
