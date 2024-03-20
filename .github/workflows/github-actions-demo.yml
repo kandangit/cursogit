@@ -3,9 +3,13 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
     create:
         tag: 'v*.*.*'
+    env:
+        VARIABLE_2: Variable de workflow
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    ENV:
+        VARIABLE_1: Variable de tasca
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
@@ -18,3 +22,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: $ {{  VARIABLE_1 }}
+      - run: $ {{  VARIABLE_2 }}
+      - run: $ {{  VARIABLE_1 }}
