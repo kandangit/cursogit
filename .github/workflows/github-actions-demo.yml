@@ -13,14 +13,7 @@ jobs:
         run: sudo apt-get install unzip
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Upload file
-        uses: actions/upload-artifact@v4
-        with:
-          name: secret.zip
-          path: secret.zip
-      - name: Download file
-        uses: actions/download-artifact@v4
-        with:
-          name: secret.zip
       - name: Descomprimeix el zip.
         run: unzip -P ${{ secrets.ZIP_PASS }} secret.zip
+      - name: Imprimeix el zip.
+        run: cat secret.txt
