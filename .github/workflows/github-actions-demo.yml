@@ -3,8 +3,8 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
     create:
         tag: 'v*.*.*'
-    env:
-        VARIABLE_2: Variable de workflow
+env:
+    VARIABLE_2: Variable de workflow
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
