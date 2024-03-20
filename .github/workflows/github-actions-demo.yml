@@ -1,8 +1,7 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
-    create:
-        tag: 'v*.*.*'
+    push
 env:
     VARIABLE_2: Variable de workflow
 jobs:
