@@ -7,8 +7,7 @@ jobs:
   Expressions-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Crea una passa que només s’executa si el push que dispara el
-workflow és a la branca principal.
+      - name: Només si el push que dispara el workflow és a la branca principal.
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
       - run: echo "PUSH A LA BRANCA MASTER"
 
