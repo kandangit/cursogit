@@ -14,11 +14,11 @@ jobs:
       - name: Upload file
         uses: actions/upload-artifact@v4
         with:
-          name: secret
+          name: secret.zip
           path: secret.zip
-      - name: Download fuke
+      - name: Download file
         uses: actions/download-artifact@v4
         with:
-          name: secret
+          name: secret.zip
       - name: Descomprimeix el zip.
         run: unzip -P ${{ secrets.ZIP_PASS }} secret.zip
