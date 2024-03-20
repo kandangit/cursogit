@@ -16,5 +16,9 @@ jobs:
         with:
           name: secret
           path: secret.zip
+      - name: Download fuke
+        uses: actions/download-artifact@v4
+        with:
+          name: secret
       - name: Descomprimeix el zip.
         run: unzip -P ${{ secrets.ZIP_PASS }} secret.zip
