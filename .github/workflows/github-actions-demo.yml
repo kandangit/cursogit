@@ -10,4 +10,6 @@ jobs:
       - name: Només si el push que dispara el workflow és a la branca principal.
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         run: echo "PUSH A LA BRANCA MASTER"
-
+      - name: Només si el disparador és una pull request.
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "S'HA FET UNA PULL REQUEST"
